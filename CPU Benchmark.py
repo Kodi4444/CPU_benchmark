@@ -59,30 +59,34 @@ end = time.time()
 
 print('# CPU =', cpuinfo.get_cpu_info()['brand_raw'])
 print('# work_size =', work_size, 'or', f'{work_size:,}')
+print('# multicore =', multicore)
 print('# use_tqdm =', use_tqdm)
 convert_seconds(round(end - start, 2))
 print('# total seconds', round(end - start, 2))
 
 # CPU = AMD Ryzen 9 3900X 12-Core Processor
 # work_size = 32768 or 32,768
+# multicore = True
 # use_tqdm = True
 # hours 0
 # minutes 0
-# seconds 10.3
-# total seconds 10.3
+# seconds 10.03
+# total seconds 10.03
 
 # CPU = AMD Ryzen 9 3900X 12-Core Processor
 # work_size = 32768 or 32,768
+# multicore = False
 # use_tqdm = True
 # hours 0
 # minutes 1
-# seconds 31.92
-# total seconds 91.92
+# seconds 31.58
+# total seconds 91.58
 
 # CPU = AMD Ryzen 9 3900X 12-Core Processor
 # work_size = 65536 or 65,536
+# multicore = True
 # use_tqdm = True
 # hours 0
 # minutes 0
-# seconds 53.93
-# total seconds 53.93
+# seconds 53.4
+# total seconds 53.4
