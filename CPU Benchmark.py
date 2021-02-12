@@ -1,14 +1,14 @@
 import concurrent.futures
-import tqdm
 import time
 import cpuinfo
-import math
+import tqdm
 
-# config ################
+# config ###########################################################################################
 work_size = 2 ** 15
 multicore = True
 use_tqdm = True
-# config ################
+# config ###########################################################################################
+
 
 # work_list gen #########
 work_list = list(range(work_size))
@@ -58,13 +58,31 @@ else:
 end = time.time()
 
 print('# CPU =', cpuinfo.get_cpu_info()['brand_raw'])
-print('# work_size =', work_size)
+print('# work_size =', work_size, 'or', f'{work_size:,}')
 print('# use_tqdm =', use_tqdm)
 convert_seconds(round(end - start, 2))
+print('# total seconds', round(end - start, 2))
 
 # CPU = AMD Ryzen 9 3900X 12-Core Processor
-# work_size = 32768
+# work_size = 32768 or 32,768
 # use_tqdm = True
 # hours 0
 # minutes 0
-# seconds 9.94
+# seconds 10.3
+# total seconds 10.3
+
+# CPU = AMD Ryzen 9 3900X 12-Core Processor
+# work_size = 32768 or 32,768
+# use_tqdm = True
+# hours 0
+# minutes 1
+# seconds 31.92
+# total seconds 91.92
+
+# CPU = AMD Ryzen 9 3900X 12-Core Processor
+# work_size = 65536 or 65,536
+# use_tqdm = True
+# hours 0
+# minutes 0
+# seconds 53.93
+# total seconds 53.93
