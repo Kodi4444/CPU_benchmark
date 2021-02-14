@@ -4,7 +4,7 @@ import cpuinfo
 import tqdm
 
 # config ###########################################################################################
-work_size = 2 ** 15
+work_size = 2 ** 18
 multicore = True
 use_tqdm = True
 # config ###########################################################################################
@@ -13,6 +13,7 @@ use_tqdm = True
 # work_list gen #########
 work_list = list(range(work_size))
 # work_list gen #########
+print('work list done')
 
 
 def convert_seconds(sec):
